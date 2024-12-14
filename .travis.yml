@@ -1,0 +1,14 @@
+language: python
+python:
+  - "3.9"
+
+install:
+  - pip install -r requirements.txt
+
+script:
+  - python ultra.py
+
+deploy:
+  provider: cron
+  cron:
+    - "* * * * *"  # This cron job runs every minute
